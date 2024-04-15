@@ -183,37 +183,4 @@
     </div>
     <script src="main.js"></script>
     
-
-<script>
-const form = document.getElementById('contactForm');
-const msg = document.getElementById('msg')
-        
-function validateForm() {
-    
-    const name = form.elements['Name'].value;
-    const email = form.elements['Email'].value;
-    const message = form.elements['Message'].value;
-
-    
-    if (name.trim() === '') {
-        msg.textContent = 'Name is required.';
-        return false;
-    }
-
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        msg.textContent = 'Please enter a valid email address.';
-        return false;
-    }
-
-    
-    if (message.trim().length < 10) {
-        msg.textContent = 'Message must be at least 10 characters long.';
-        return false;
-    }
-        msg.textContent = '';
-    return true;
-}
-        </script>
 </body>
